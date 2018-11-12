@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<META NAME="Description" CONTENT="Animation Software Development C++ OpenGL">
+		<META NAME="KEYWORDS" CONTENT="Python,Animation,MSc,Effects,MSc Computer Animation,C++,,Renderman,Maya,Houdini">	
+    <title>Animation Software Development </title>
+		<link href="/jmacey/css/stylesheet.css" rel="stylesheet" type="text/css" media="all"> 
+		<link rel="stylesheet" type="text/css" href="/jmacey/css/accordion.css" />
+		<link rel="stylesheet" type="text/css" href="/jmacey/js/jquery-ui/jquery-ui.min.css" />
+    <script type="text/javascript" src="/jmacey/js/joint.js/lodash.min.js"></script>
+    <script type="text/javascript" src="/jmacey/js/joint.js/backbone-min.js"></script>
+    <script type="text/javascript" src="/jmacey/js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/jmacey/js/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/jmacey/js/accordion.js"></script>
+</head>
+
+<!--#include virtual="/jmacey/structure.inc" -->
+<div class="contentText" id="contentText">
+	<body bgcolor="#ffffff">
+	<h1><font color="#330099">Animation Software Engineering</font></h1>
+	<h4><a href="ASEAssignment201516.pdf">ASE Assignment pdf</a> (<a href="../CGITech/index.html">CGI Tech page</a>) <a href="http://nccastaff.bournemouth.ac.uk/jmacey/ProgProj/">Assignment Ideas</a>	</h4>
+	<p>Jon's Coding <a href="http://jonmacey.blogspot.com/">Blog</a> <a href="http://share.xmarks.com/folder/bookmarks/ye6IOPefQK">Jon's C++ Bookmarks</a> <a href="http://share.xmarks.com/folder/bookmarks/DFJtyXhhYc">Graphics Bookmarks</a>	</p>
+	<h2>Lecture Notes</h2>
+
+<script>
+
+createAccordion("l1","<B>Lecture 1 </B> Introduction");
+appendTabs("l1",["Slides","Code","Self Study"],
+                ['<a href="slides/interactive/lecture1/slides.html">Introduction to ASE (basic C++)</a>',
+                '<a href="https://github.com/NCCA/ASELectureCode/tree/master/Lecture1">code</a>',
+                `
+                <P/><a href="http://jonmacey.blogspot.com/2011/09/hello-world-3.html"> Blog post (hello world * 3)</a>
+                <P/><a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup"> basic git setup</a> 
+                <P/><a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/" > git ssh </a>
+                <P/><a href="https://try.github.io/levels/1/challenges/1"> learn git (interactive) </a>
+                `]);
+
+  createAccordion("l2","<B>Lecture 2</B> Basic C++ (11 and 14)");
+  appendTabs("l2",["pre viewing","Slides","Code","Self Study"],
+                  ['<iframe src="https://channel9.msdn.com/Events/GoingNative/GoingNative-2012/Keynote-Bjarne-Stroustrup-Cpp11-Style/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>',
+                    '<a href="slides/interactive/lecture2/slides.html">Basic C++ (11 and 14)</a>',
+                  '<P/><a href="https://github.com/NCCA/ASELectureCode/tree/master/Lecture2">code</a>',
+                  `
+                  <P/><a href="https://nccastaff.bournemouth.ac.uk/jmacey/ASE/labs/lab1.html"> plotting with gnuplot </a>
+                  `]);
+
+  createAccordion("l3","<B>Lecture 3 </B>Memory and Pointers in C and C++ ");
+  appendTabs("l3",["Slides","Code","Self Study"],
+                  ['<a href="slides/interactive/lecture3/slides.html">Lecture 3 Memory and Pointers in C and C++ </a>',
+                  '<P/><a href="https://github.com/NCCA/ASELectureCode/tree/master/Lecture3">code</a>',
+                  `
+                  <P/><a href="https://herbsutter.com/2013/05/29/gotw-89-solution-smart-pointers/">gotw-89 smart pointers</a>
+                  <P/><a href="http://scrupulousabstractions.tumblr.com/post/37576903218/cpp11style-no-new-delete">never write new or delete again!</a>
+                  <P/><iframe width="560" height="315" src="https://www.youtube.com/embed/xnqTKD8uD64" frameborder="0" allowfullscreen></iframe>
+                  `]);
+  createAccordion("l4","<B>Lecture 4 </B>Introduction to classess  ");
+  appendTabs("l4",["Slides","Code","Self Study"],[]);
+  
+  createAccordion("l5","<B>Lecture 5 </B>Operator Overloading and STL  ");
+  appendTabs("l5",["Slides","Code","Self Study"],[]);
+  
+  createAccordion("l6","<B>Lecture 6 </B>Design Patterns in C++  ");
+  appendTabs("l6",["Slides","Code","Self Study"],[]);
+  
+ createAccordion("l7","<B>Lecture 7 </B>Introduction to Qt   ");
+  appendTabs("l7",["Slides","Code","Self Study"],[]);
+ 
+ createAccordion("l8","<B>Lecture 8 </B>Modern OpenGL   ");
+  appendTabs("l8",["Slides","Code","Self Study"],['','<a href="https://github.com/NCCA/OpenGLCode">code</a>',
+  `
+  <P><a href="https://www.opengl.org/wiki/Vertex_Specification">on OpenGL Vertex Specification</a></P>
+  <P><a href="https://www.opengl.org/wiki/Vertex_Specification_Best_Practices">Best Practices </P>
+`]);
+ 
+ createAccordion("l9","<B>Lecture 9 </B>The OpenGL Shading Language API   ");
+  appendTabs("l9",["Slides","Code","Self Study"],['','<a href="https://github.com/NCCA/FirstShaderQt">code</a>','']);
+ 
+ createAccordion("l10","<B>Lecture 10 </B>The OpenGL Shading Language  ");
+  appendTabs("l10",["Slides","Code","Self Study"],[]);
+
+createAccordion("l11","<B>Lecture 11 </B>Transformations and Virtual Camera  ");
+  appendTabs("l11",["Slides","Code","Self Study"],[]);
+createAccordion("l12","<B>Lecture 12 </B>Shading Models  ");
+  appendTabs("l12",["Slides","Code","Self Study"],[]);
+createAccordion("l13","<B>Lecture 13 </B>Texturing  ");
+  appendTabs("l13",["Slides","Code","Self Study"],[]);
+createAccordion("l14","<B>Lecture 14 </B>Advanced OpenGL, FBO, Instancing  ");
+  appendTabs("l14",["Slides","Code","Self Study"],[]);
+            
+</script>
+
+		</body>
+    <!--#include virtual="/jmacey/footer.inc" -->
+</div>
+
+
+
+<script>
+createAccordions();
+</script>
+
+
+</html>

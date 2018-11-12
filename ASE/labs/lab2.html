@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<title>Image Writing</title>
+
+<xmp theme="Cerulean" style="display:none;">
+# Writing Images
+
+Using dynamic memory allocation we can create an array for an RGB image, the easiest way of doing this is to use a smart pointer and allocate a block of memory for each of the RGB(A) elements we require to save. 
+
+At it's simplest level we can create this as an unsigned char data block as follows
+
+``` 
+unsigned char *image = new unsigned char [WIDTH*HEIGHT*3]; // RGB
+```
+
+To set pixel values we can prototype a function called setPixel which can access this data
+
+```
+  void setPixel(size_t _x, size_t _y, unsigned char _r, unsigned char _g, unsigned char _b);
+```
+
+This function can access the data in the image array to set the pixel values by calculating the offset into the unsigned char array.
+
+## Image Class
+
+The following UML diagram show the design for a simple class to set and save images.
+
+![alt](ImageClass.png)
+
+Using the files Image.h and Image.cpp generate code such that.
+
+- allocate an unsigned char array for the RGB (A) data based on the parameters passed in to the ctor.
+- use a std::unique_ptr to store this array (and thus destroy it) don't forget std::make_unique
+- implement the setPixel function to set the data in the m_data array.
+- using setPixel write a function to clear the screen to a set RGB colour
+
+## Saving Images
+To save images there are a number of libraries installed in the linux labs, such as OpenImageIO, QImage, SDL Image and ImageMagick. 
+The simplest method is to use Magick++.
+
+### Magick++ 
+
+Magick++ provides a simple C++ API to the ImageMagick image processing library which supports reading and writing a huge number of image formats as well as supporting a broad spectrum of traditional image processing operations. Magick++ provides access to most of the features available from the C API but in a simple object-oriented and well-documented framework.
+For More details look at the following url : http://www.imagemagick.org/Magick++/ The simplest operation with the Magick++ Library is the dumping of an array to an image file. 
+
+```
+Magick::Image output(WIDTH,HEIGHT,"RGB",Magick::CharPixel,m_image.get());
+output.depth(16);
+output.write("Test.jpg");
+```
+
+To make this work with the compiler we need to also add some flags to the command line, this can be done by executing the following config script (installe as part of Magick++)
+
+```
+Magick++-config --cppflags --libs
+```
+
+However for ease we will use a Qt project to do this for us [from this repo](https://github.com/NCCA/ASELabExamples/tree/master/Images/ImageMagick)
+
+## Exercises
+Once you can save out a simple image use the class developed to investigate the following using the examples and code here https://github.com/NCCA/ImageIO
+
+- write a program to animate a simple line crossing the screen, by outputing multiple frames to disc (hint use a loop and sprintf to write the filename out) you can use fcheck or animate to show the frames
+- Investigate the use of fmod to create repeating patterns such as a sphere
+- Investigate the C++ 11 random functions to create random images using the different distributions
+- Using [Bresenham's line algorithm](https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm) add a method to the Image class called drawLine(Point _start, Point _end, Colour _colour); <sup>1</sup>
+
+<sup>1</sup> Note you will need to also implement classes for Point and Colour 
+
+</xmp>
+
+<script src="https://nccastaff.bournemouth.ac.uk/jmacey/js/strapdown/strapdown.js"></script>
+</html>
